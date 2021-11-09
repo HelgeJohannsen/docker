@@ -1,11 +1,10 @@
-'use strict';
-
-const express = require('express');
-
-// Constants
-const PORT = 8080;
-const HOST = '0.0.0.0';
+const express = require("express");
 const { join } = require("path");
+const morgan = require("morgan");
+const helmet = require("helmet");
+const app = express();
+
+
 
 app.get("/auth_config.json", (req, res) => {
   res.sendFile(join(__dirname, "auth_config.json"));
@@ -19,5 +18,4 @@ process.on("SIGINT", function() {
   process.exit();
 });
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+module.exports = app;
