@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "docker"
+client_id = "f38f2da81dece49ce463c284bd50f846"
+application_url = "https://maine-yamaha-modes-coupon.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://maine-yamaha-modes-coupon.trycloudflare.com/auth/callback",
+  "https://maine-yamaha-modes-coupon.trycloudflare.com/auth/shopify/callback",
+  "https://maine-yamaha-modes-coupon.trycloudflare.com/api/auth/callback",
+  "https://maine-yamaha-modes-coupon.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "helge-test.myshopify.com"
