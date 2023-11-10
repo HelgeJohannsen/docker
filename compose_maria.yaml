@@ -1,0 +1,12 @@
+services:
+  db:
+    container_name: db
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --skip-innodb-read-only-compressed
+    image: mariadb:10
+    restart: always
+    volumes:
+      - ../dbData:/var/lib/mysql
+    environment:
+      - MARIADB_INITDB_SKIP_TZINFO=true
+        #  - TZ=Europe/Berlin
+      - MYSQL_ROOT_PASSWORD=OoquoP2OSiwaeja3maiyohN7ohr8uDoh

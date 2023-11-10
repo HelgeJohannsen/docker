@@ -3,7 +3,8 @@ services:
 #    build: .
     image: "traefik/whoami"
     environment:
-      SHOPIFY_APP_URL: "https://ebike.cpro-server.de"
+#      SHOPIFY_APP_URL: "https://ebike.cpro-server.de"
+      HOST: "0.0.0.0"
       SHOPIFY_API_KEY: "f38f2da81dece49ce463c284bd50f846"
       SHOPIFY_API_SECRET: "96dd4cc239b6d62e50c87e28f3d54f0a"
       SCOPES: "write_products"
